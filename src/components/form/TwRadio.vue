@@ -43,21 +43,21 @@ const { isError } = useFormValidator({
 </script>
 
 <template>
-  <label class="vt-font-bold vt-text-gray-700 dark:vt-text-gray-400">
+  <label class="font-bold text-gray-700 dark:text-gray-400">
     {{ label }}
   </label>
   <label
     :for="`${option.label}-${id}`"
     v-for="option in options"
     :key="`${option.label}-${id}`"
-    class="vt-font-bold vt-text-gray-700 dark:vt-text-gray-400 vt-block"
+    class="font-bold text-gray-700 dark:text-gray-400 block"
     :class="[$attrs.class]"
   >
     <input
       v-bind="$attrs"
       v-model="computedValue"
       type="radio"
-      class="vt-outline-primary vt-rounded-full"
+      class="outline-primary rounded-full"
       :name="id"
       :id="`${option.label}-${id}`"
       :disabled="disabled"

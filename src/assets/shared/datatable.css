@@ -1,9 +1,9 @@
-.vt-tw-datatable .sorting {
+.tw-datatable .sorting {
     position: relative;
     cursor: pointer;
 }
 
-.vt-tw-datatable .sorting::after {
+.tw-datatable .sorting::after {
     content: "\2304";
     font-size: 0.6rem;
     top: 0.35rem;
@@ -12,7 +12,7 @@
     opacity: 0.35;
 }
 
-.vt-tw-datatable .sorting::before {
+.tw-datatable .sorting::before {
     content: "\2303";
     font-size: 0.6rem;
     top: 0.35rem;
@@ -21,10 +21,10 @@
     opacity: 0.35;
 }
 
-.vt-tw-datatable .sorting.desc::after {
+.tw-datatable .sorting.desc::after {
     opacity: 1;
 }
 
-.vt-tw-datatable .sorting.asc::before {
+.tw-datatable .sorting.asc::before {
     opacity: 1;
 }

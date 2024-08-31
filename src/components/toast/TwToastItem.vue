@@ -40,18 +40,18 @@ const toast = useToast();
 const classType = computed(() => {
   switch (props.type) {
     case "success":
-      return { "vt-border-t-green-600 dark:vt-border-t-gray-600": true };
+      return { "border-t-green-600 dark:border-t-gray-600": true };
     case "info":
-      return { "vt-border-t-sky-400 dark:vt-border-t-sky-600": true };
+      return { "border-t-sky-400 dark:border-t-sky-600": true };
     case "error":
       return {
-        "vt-border-t-red-600 dark:vt-border-t-gray-600": true,
+        "border-t-red-600 dark:border-t-gray-600": true,
         error: true,
       };
     case "warning":
-      return { "vt-border-t-yellow-600 dark:vt-border-t-gray-600": true };
+      return { "border-t-yellow-600 dark:border-t-gray-600": true };
     default:
-      return { "vt-border-t-green-600 dark:vt-border-t-gray-600": true };
+      return { "border-t-green-600 dark:border-t-gray-600": true };
   }
 });
 
@@ -73,15 +73,15 @@ const iconType = computed(() => {
 const textColor = computed(() => {
   switch (props.type) {
     case "success":
-      return "vt-text-green-800 dark:vt-text-gray-300";
+      return "text-green-800 dark:text-gray-300";
     case "info":
-      return "vt-text-sky-800 dark:vt-text-gray-300";
+      return "text-sky-800 dark:text-gray-300";
     case "error":
-      return "vt-text-red-800 dark:vt-text-gray-300";
+      return "text-red-800 dark:text-gray-300";
     case "warning":
-      return "vt-text-yellow-800 dark:vt-text-gray-300";
+      return "text-yellow-800 dark:text-gray-300";
     default:
-      return "vt-text-gray-800 dark:vt-text-gray-300";
+      return "text-gray-800 dark:text-gray-300";
   }
 });
 
@@ -109,36 +109,36 @@ function removeToast() {
   <div :class="type">
     <transition name="toast">
       <div
-        class="vt-text-center vt-relative vt-text-gray-800 dark:vt-text-gray-300"
+        class="text-center relative text-gray-800 dark:text-gray-300"
         @mouseenter="hover = true"
         @mouseleave="hover = false"
       >
         <div
-          class="vt-py-3 vt-pt-1 vt-px-2 vt-shadow vt-bg-opacity-95 vt-rounded vt-relative vt-max-h-60 vt-overflow-y-auto vt-bg-white dark:vt-bg-gray-700 vt-border-t-8"
+          class="py-3 pt-1 px-2 shadow bg-opacity-95 rounded relative max-h-60 overflow-y-auto bg-white dark:bg-gray-700 border-t-8"
           :class="classType"
         >
           <div
-            class="vt-text-black vt-opacity-50 vt-cursor-pointer vt-rounded-full vt-absolute vt-top-2 vt-right-2"
+            class="text-black opacity-50 cursor-pointer rounded-full absolute top-2 right-2"
             @click="removeToast()"
           >
             <TwFeather
-              class="vt-text-gray-900 dark:vt-text-gray-300"
+              class="text-gray-900 dark:text-gray-300"
               type="x"
             />
           </div>
-          <div class="vt-flex vt-items-center vt-gap-3 vt-text-left">
+          <div class="flex items-center gap-3 text-left">
             <template v-if="iconType">
               <TwFeather
-                class="vt-font-bold vt-text-lg"
+                class="font-bold text-lg"
                 :class="textColor"
                 :type="iconType"
               />
             </template>
-            <div class="vt-text-left vt-pr-4">
+            <div class="text-left pr-4">
               <template v-if="title">
                 <div
                   :class="textColor"
-                  class="vt-font-bold vt-text-lg vt-text-gray-900 dark:vt-text-gray-300"
+                  class="font-bold text-lg text-gray-900 dark:text-gray-300"
                 >
                   {{ title }}
                 </div>
@@ -150,11 +150,11 @@ function removeToast() {
               </template>
             </div>
             <template v-if="jsonMessage">
-              <ul class="vt-flex vt-flex-col vt-gap-2">
+              <ul class="flex flex-col gap-2">
                 <li
                   v-for="(tmessage, key) in jsonMessage"
                   :key="'errmes' + key"
-                  class="vt-p-2 vt-rounded vt-text-left vt-border"
+                  class="p-2 rounded text-left border"
                 >
                   <strong>{{ key }}:</strong> {{ tmessage }}
                 </li>
@@ -164,9 +164,9 @@ function removeToast() {
         </div>
         <div
           v-if="showLifetime"
-          class="vt-bg-gray-900 dark:vt-bg-gray-300 vt-bg-opacity-40 vt-h-[0.35rem] vt-absolute vt-bottom-0 vt-rounded-b-md vt-mx-auto"
+          class="bg-gray-900 dark:bg-gray-300 bg-opacity-40 h-[0.35rem] absolute bottom-0 rounded-b-md mx-auto"
           :class="{
-            'vt-rounded-br-none': lifetimePercent < 95,
+            'rounded-br-none': lifetimePercent < 95,
           }"
           :style="barStyle"
         ></div>

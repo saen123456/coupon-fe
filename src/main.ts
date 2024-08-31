@@ -1,16 +1,16 @@
 import { createApp, type Directive } from "vue";
-import App from "./home/Home.vue";
+import App from "./views/home/Home.vue";
 
 import "../src/assets/dev/main.css";
 import { useForm } from "../src/composables/form";
 import Ripple from "../src/directives/ripple";
 import ClickOutside from "../src/directives/clickOutside";
 import { createMemoryHistory, createRouter } from "vue-router";
-import HomeView from "./home/Home.vue";
-import ProductView from "./product/Product.vue";
+import HomeView from "./views/home/Home.vue";
+import ProductView from "./views/product/Product.vue";
 
 const routes = [
-  { path: "/", component: HomeView },
+  // { path: "/", component: HomeView },
   { path: "/product", component: ProductView },
 ];
 

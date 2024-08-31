@@ -69,11 +69,11 @@ function forceCloseDropdown() {
         <slot :is-open="isOpen" :model-value="modelValue">
           <div
             v-if="modelValue"
-            class="vt-p-2 vt-text-left dark:vt-text-gray-200"
+            class="p-2 text-left dark:text-gray-200"
           >
             {{ valueText }}
           </div>
-          <div v-else class="vt-p-2 vt-text-gray-400 vt-italic vt-text-left">
+          <div v-else class="p-2 text-gray-400 italic text-left">
             {{ placeholder }}
           </div>
         </slot>
@@ -86,28 +86,28 @@ function forceCloseDropdown() {
           :model-value="modelValue"
         >
           <transition
-            enter-from-class="vt-transform vt-opacity-0 vt-scale-95"
-            enter-active-class="vt-transition vt-ease-out vt-duration-200"
-            enter-to-class="vt-transform vt-opacity-100 vt-scale-100"
-            leave-from-class="vt-transform vt-opacity-100 vt-scale-100"
-            leave-active-class="vt-transition vt-ease-in vt-duration-75"
-            leave-to-class="vt-transform vt-opacity-0 vt-scale-95"
+            enter-from-class="transform opacity-0 scale-95"
+            enter-active-class="transition ease-out duration-200"
+            enter-to-class="transform opacity-100 scale-100"
+            leave-from-class="transform opacity-100 scale-100"
+            leave-active-class="transition ease-in duration-75"
+            leave-to-class="transform opacity-0 scale-95"
           >
             <div
               v-if="isOpen"
-              class="vt-absolute vt-bg-white dark:vt-bg-gray-900 vt-w-full vt-z-10 vt-shadow-lg vt-rounded-b vt-overflow-hidden vt-border vt-border-t-0 vt-border-gray-100 dark:vt-border-gray-700"
+              class="absolute bg-white dark:bg-gray-900 w-full z-10 shadow-lg rounded-b overflow-hidden border border-t-0 border-gray-100 dark:border-gray-700"
             >
-              <div class="vt-w-full vt-p-2">
+              <div class="w-full p-2">
                 <TwInput
                   v-model="search"
                   type="text"
                   placeholder="Type something"
                 />
               </div>
-              <ul class="vt-max-h-52 vt-overflow-y-auto">
+              <ul class="max-h-52 overflow-y-auto">
                 <template v-if="items.length === 0">
                   <li
-                    class="vt-p-3 vt-w-full vt-text-sm vt-text-center vt-overflow-hidden vt-break-words"
+                    class="p-3 w-full text-sm text-center overflow-hidden break-words"
                   >
                     No Data
                   </li>
@@ -118,11 +118,11 @@ function forceCloseDropdown() {
                     :key="'dropdown-' + item.value"
                   >
                     <a
-                      class="vt-block vt-p-3 vt-cursor-pointer vt-w-full vt-text-sm vt-select-none vt-transition-all vt-duration-300 vt-ease-in-out vt-text-left focus:vt-bg-gray-600 focus:vt-text-gray-100 focus:vt-outline-gray-700 vt-ring-0 vt-outline-none focus:vt-border-transparent focus:vt-shadow-[0_0_0_0.2rem_rgb(0_123_255_/_25%)]"
+                      class="block p-3 cursor-pointer w-full text-sm select-none transition-all duration-300 ease-in-out text-left focus:bg-gray-600 focus:text-gray-100 focus:outline-gray-700 ring-0 outline-none focus:border-transparent focus:shadow-[0_0_0_0.2rem_rgb(0_123_255_/_25%)]"
                       :class="{
-                        'vt-bg-gray-800 dark:vt-bg-gray-700 vt-text-white':
+                        'bg-gray-800 dark:bg-gray-700 text-white':
                           modelValue === item.value,
-                        'hover:vt-bg-gray-100 dark:hover:vt-bg-gray-800 vt-text-gray-700 dark:vt-text-gray-400':
+                        'hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-400':
                           modelValue !== item.value,
                       }"
                       href="#"
@@ -134,7 +134,7 @@ function forceCloseDropdown() {
                 </template>
                 <template v-else>
                   <li
-                    class="vt-p-3 vt-w-full vt-text-sm vt-text-center vt-overflow-hidden vt-break-words"
+                    class="p-3 w-full text-sm text-center overflow-hidden break-words"
                   >
                     No matching data for key "{{ search }}"
                   </li>

@@ -97,7 +97,7 @@ function onDragLeave(e: DragEvent) {
 <template>
   <label
     v-if="label"
-    class="vt-font-bold vt-text-gray-700 dark:vt-text-gray-400"
+    class="font-bold text-gray-700 dark:text-gray-400"
   >
     {{ label }}
   </label>
@@ -110,11 +110,11 @@ function onDragLeave(e: DragEvent) {
     :handle-input-image="handleInputImage"
   >
     <div v-if="imageUrls && imageUrls.length > 0">
-      <div class="vt-w-full vt-flex vt-items-center vt-justify-center vt-mt-2">
+      <div class="w-full flex items-center justify-center mt-2">
         <div
-          class="vt-border vt-rounded-t-lg vt-w-full dark:vt-border-gray-700 vt-overflow-auto vt-relative vt-select-none"
+          class="border rounded-t-lg w-full dark:border-gray-700 overflow-auto relative select-none"
         >
-          <div class="vt-grid vt-grid-cols-12 vt-justify-left vt-gap-4 vt-p-4">
+          <div class="grid grid-cols-12 justify-left gap-4 p-4">
             <slot
               name="items"
               :image-urls="imageUrls"
@@ -122,21 +122,21 @@ function onDragLeave(e: DragEvent) {
             >
               <template v-if="props.multiple">
                 <div
-                  class="vt-relative vt-col-span-6 sm:vt-col-span-4 md:vt-col-span-3 lg:vt-col-span-2"
+                  class="relative col-span-6 sm:col-span-4 md:col-span-3 lg:col-span-2"
                   v-for="(url, index) in imageUrls"
                   :key="`form-image-${index}`"
                 >
                   <img
                     :src="url"
-                    class="vt-h-48 vt-object-cover vt-w-full vt-rounded vt-bg-white dark:vt-bg-gray-900 vt-shadow vt-border dark:vt-border-gray-700"
+                    class="h-48 object-cover w-full rounded bg-white dark:bg-gray-900 shadow border dark:border-gray-700"
                     alt="preview"
                   />
                   <div
-                    class="vt-cursor-pointer vt-absolute vt-top-2 vt-right-2"
+                    class="cursor-pointer absolute top-2 right-2"
                     @click="removeImage(index)"
                   >
                     <div
-                      class="hover:vt-bg-gray-50 dark:hover:vt-bg-gray-900 vt-w-8 vt-h-8 vt-rounded-full vt-flex vt-items-center vt-justify-center hover:vt-bg-opacity-90"
+                      class="hover:bg-gray-50 dark:hover:bg-gray-900 w-8 h-8 rounded-full flex items-center justify-center hover:bg-opacity-90"
                     >
                       <IconX />
                     </div>
@@ -145,22 +145,22 @@ function onDragLeave(e: DragEvent) {
               </template>
               <template v-else>
                 <div
-                  class="vt-relative vt-col-span-12 vt-flex vt-items-center vt-justify-center"
+                  class="relative col-span-12 flex items-center justify-center"
                   v-for="(url, index) in imageUrls"
                   :key="`form-image-${index}`"
                 >
-                  <div class="vt-relative vt-w-96">
+                  <div class="relative w-96">
                     <img
                       :src="url"
-                      class="vt-object-cover vt-rounded vt-bg-white dark:vt-bg-gray-900 vt-shadow vt-border dark:vt-border-gray-700"
+                      class="object-cover rounded bg-white dark:bg-gray-900 shadow border dark:border-gray-700"
                       alt="preview"
                     />
                     <div
-                      class="vt-cursor-pointer vt-absolute vt-top-2 vt-right-2"
+                      class="cursor-pointer absolute top-2 right-2"
                       @click="removeImage(index)"
                     >
                       <div
-                        class="hover:vt-bg-gray-50 dark:hover:vt-bg-gray-900 vt-w-8 vt-h-8 vt-rounded-full vt-flex vt-items-center vt-justify-center hover:vt-bg-opacity-90"
+                        class="hover:bg-gray-50 dark:hover:bg-gray-900 w-8 h-8 rounded-full flex items-center justify-center hover:bg-opacity-90"
                       >
                         <IconX />
                       </div>
@@ -172,18 +172,18 @@ function onDragLeave(e: DragEvent) {
           </div>
         </div>
       </div>
-      <div class="vt-flex vt-w-full vt-items-center vt-justify-center">
+      <div class="flex w-full items-center justify-center">
         <label
           @dragover="onDragOver"
           @drop="onDrop"
           @dragleave="onDragLeave"
-          class="vt-transition-all vt-ease-in-out vt-w-full vt-flex vt-flex-col vt-items-center vt-px-4 vt-py-6 vt-bg-white hover:vt-bg-gray-100 dark:vt-bg-gray-800 dark:hover:vt-bg-gray-900 dark:vt-border-gray-700 dark:vt-text-gray-300 vt-text-gray-400 vt-rounded-b-lg vt-tracking-wide vt-uppercase vt-border-dashed vt-border-2 vt-border-gray-500 vt-cursor-pointer"
+          class="transition-all ease-in-out w-full flex flex-col items-center px-4 py-6 bg-white hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-900 dark:border-gray-700 dark:text-gray-300 text-gray-400 rounded-b-lg tracking-wide uppercase border-dashed border-2 border-gray-500 cursor-pointer"
           :class="{
-            'vt-bg-gray-200': isHover,
+            'bg-gray-200': isHover,
           }"
         >
           <UploadSvg />
-          <span class="vt-mt-2 vt-text-base vt-leading-normal">
+          <span class="mt-2 text-base leading-normal">
             <template v-if="!isHover"> Select or Drop file here </template>
             <template v-else> Drop It </template>
           </span>
@@ -191,7 +191,7 @@ function onDragLeave(e: DragEvent) {
             ref="fileElement"
             type="file"
             style="display: none"
-            class="vt-hidden"
+            class="hidden"
             accept="image/png, image/gif, image/jpeg"
             :multiple="props.multiple"
             @change="handleInputImage"
@@ -199,18 +199,18 @@ function onDragLeave(e: DragEvent) {
         </label>
       </div>
     </div>
-    <div v-else class="vt-flex vt-w-full vt-items-center vt-justify-center">
+    <div v-else class="flex w-full items-center justify-center">
       <label
         @dragover="onDragOver"
         @drop="onDrop"
         @dragleave="onDragLeave"
-        class="vt-transition-all vt-ease-in-out vt-w-full vt-flex vt-flex-col vt-items-center vt-px-4 vt-py-6 vt-bg-white hover:vt-bg-gray-100 dark:vt-bg-gray-800 dark:hover:vt-bg-gray-900 dark:vt-border-gray-700 dark:vt-text-gray-300 vt-text-gray-400 vt-rounded-lg vt-tracking-wide vt-uppercase vt-border-dashed vt-border-2 vt-border-gray-500 vt-cursor-pointer"
+        class="transition-all ease-in-out w-full flex flex-col items-center px-4 py-6 bg-white hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-900 dark:border-gray-700 dark:text-gray-300 text-gray-400 rounded-lg tracking-wide uppercase border-dashed border-2 border-gray-500 cursor-pointer"
         :class="{
-          'vt-bg-gray-200': isHover,
+          'bg-gray-200': isHover,
         }"
       >
         <UploadSvg />
-        <span class="vt-mt-2 vt-text-base vt-leading-normal">
+        <span class="mt-2 text-base leading-normal">
           <template v-if="!isHover"> Select or Drop file here </template>
           <template v-else> Drop It </template>
         </span>
@@ -218,7 +218,7 @@ function onDragLeave(e: DragEvent) {
           ref="fileElement"
           type="file"
           style="display: none"
-          class="vt-hidden"
+          class="hidden"
           accept="image/png, image/gif, image/jpeg"
           :multiple="props.multiple"
           @change="handleInputImage"
