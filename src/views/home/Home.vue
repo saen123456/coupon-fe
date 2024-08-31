@@ -28,8 +28,18 @@ onMounted(async () => {
 </script>
 
 <template>
-  <HeaderNavbar />
-  <ProductCard />
+  <div class="mb-5">
+    <HeaderNavbar />
+  </div>
+  <div class="grid grid-cols-5 gap-4">
+    <ProductCard />
+    <ProductCard />
+    <ProductCard />
+    <ProductCard />
+    <ProductCard />
+    <ProductCard />
+    <ProductCard />
+  </div>
   <!-- <h1>Hello App!</h1>
   <p><strong>Current route path:</strong> {{ $route.fullPath }}</p>
   <nav>

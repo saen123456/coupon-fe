@@ -1,125 +1,95 @@
 <template>
   <div
-    class="grid mb-8 border border-gray-200 rounded-lg shadow-sm dark:border-gray-700 md:mb-12 md:grid-cols-2 bg-white dark:bg-gray-800"
+    class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
   >
-    <figure
-      class="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-ss-lg md:border-e dark:bg-gray-800 dark:border-gray-700"
-    >
-      <blockquote
-        class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400"
-      >
-        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-          Very easy this was to integrate
-        </h3>
-        <p class="my-4">
-          If you care for your time, I hands down would go with this."
-        </p>
-      </blockquote>
-      <figcaption class="flex items-center justify-center">
-        <img
-          class="rounded-full w-9 h-9"
-          src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png"
-          alt="profile picture"
-        />
-        <div
-          class="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3"
+    <a href="#">
+      <img
+        class="p-8 rounded-t-lg"
+        src="https://www.apple.com/v/iphone/home/bv/images/overview/select/iphone_15_pro__bpnjhcrxofqu_large_2x.png"
+        alt="product image"
+      />
+    </a>
+    <div class="px-5 pb-5">
+      <a href="#">
+        <h5
+          class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white"
         >
-          <div>Bonnie Green</div>
-          <div class="text-sm text-gray-500 dark:text-gray-400">
-            Developer at Open AI
-          </div>
+          Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport
+        </h5>
+      </a>
+      <div class="flex items-center mt-2.5 mb-5">
+        <div class="flex items-center space-x-1 rtl:space-x-reverse">
+          <svg
+            class="w-4 h-4 text-yellow-300"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            viewBox="0 0 22 20"
+          >
+            <path
+              d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+            />
+          </svg>
+          <svg
+            class="w-4 h-4 text-yellow-300"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            viewBox="0 0 22 20"
+          >
+            <path
+              d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+            />
+          </svg>
+          <svg
+            class="w-4 h-4 text-yellow-300"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            viewBox="0 0 22 20"
+          >
+            <path
+              d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+            />
+          </svg>
+          <svg
+            class="w-4 h-4 text-yellow-300"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            viewBox="0 0 22 20"
+          >
+            <path
+              d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+            />
+          </svg>
+          <svg
+            class="w-4 h-4 text-gray-200 dark:text-gray-600"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            viewBox="0 0 22 20"
+          >
+            <path
+              d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"
+            />
+          </svg>
         </div>
-      </figcaption>
-    </figure>
-    <figure
-      class="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 md:rounded-se-lg dark:bg-gray-800 dark:border-gray-700"
-    >
-      <blockquote
-        class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400"
-      >
-        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-          Solid foundation for any project
-        </h3>
-        <p class="my-4">
-          Designing with Figma components that can be easily translated to the
-          utility classes of Tailwind CSS is a huge timesaver!"
-        </p>
-      </blockquote>
-      <figcaption class="flex items-center justify-center">
-        <img
-          class="rounded-full w-9 h-9"
-          src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/roberta-casas.png"
-          alt="profile picture"
-        />
-        <div
-          class="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3"
+        <span
+          class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-3"
+          >5.0</span
         >
-          <div>Roberta Casas</div>
-          <div class="text-sm text-gray-500 dark:text-gray-400">
-            Lead designer at Dropbox
-          </div>
-        </div>
-      </figcaption>
-    </figure>
-    <figure
-      class="flex flex-col items-center justify-center p-8 text-center bg-white border-b border-gray-200 md:rounded-es-lg md:border-b-0 md:border-e dark:bg-gray-800 dark:border-gray-700"
-    >
-      <blockquote
-        class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400"
-      >
-        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-          Mindblowing workflow
-        </h3>
-        <p class="my-4">
-          Aesthetically, the well designed components are beautiful and will
-          undoubtedly level up your next application."
-        </p>
-      </blockquote>
-      <figcaption class="flex items-center justify-center">
-        <img
-          class="rounded-full w-9 h-9"
-          src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png"
-          alt="profile picture"
-        />
-        <div
-          class="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3"
+      </div>
+      <div class="flex items-center justify-between">
+        <span class="text-3xl font-bold text-gray-900 dark:text-white"
+          >$599</span
         >
-          <div>Jese Leos</div>
-          <div class="text-sm text-gray-500 dark:text-gray-400">
-            Software Engineer at Facebook
-          </div>
-        </div>
-      </figcaption>
-    </figure>
-    <figure
-      class="flex flex-col items-center justify-center p-8 text-center bg-white border-gray-200 rounded-b-lg md:rounded-se-lg dark:bg-gray-800 dark:border-gray-700"
-    >
-      <blockquote
-        class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400"
-      >
-        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-          Efficient Collaborating
-        </h3>
-        <p class="my-4">
-          You have many examples that can be used to create a fast prototype for
-          your team."
-        </p>
-      </blockquote>
-      <figcaption class="flex items-center justify-center">
-        <img
-          class="rounded-full w-9 h-9"
-          src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/joseph-mcfall.png"
-          alt="profile picture"
-        />
-        <div
-          class="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3"
+        <a
+          href="#"
+          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          >Add to cart</a
         >
-          <div>Joseph McFall</div>
-          <div class="text-sm text-gray-500 dark:text-gray-400">
-            CTO at Google
-          </div>
-        </div>
-      </figcaption>
-    </figure>
+      </div>
+    </div>
   </div>
 </template>
