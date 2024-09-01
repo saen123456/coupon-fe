@@ -1,6 +1,5 @@
 <template>
-  <a
-    href="#"
+  <div
     class="block max-w-sm p-6 bg-cyan-100 border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
   >
     <!-- Display coupon details -->
@@ -15,7 +14,7 @@
     <p class="font-normal text-gray-700 dark:text-white-400">
       จำนวนการใช้: {{ coupon.usage_count }}
     </p>
-  </a>
+  </div>
 </template>
 
 <script>
