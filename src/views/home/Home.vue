@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import HeaderNavbar from "../../components/navbar/header.vue";
+import FooterNavbar from "../../components/navbar/footer.vue";
 import ProductCard from "../../components/product/Product.vue";
 
 import { TwToggle, TwDialog } from "/src/build";
@@ -39,6 +40,9 @@ onMounted(async () => {
     <ProductCard />
     <ProductCard />
     <ProductCard />
+  </div>
+  <div class="mt-5">
+    <FooterNavbar />
   </div>
   <!-- <h1>Hello App!</h1>
   <p><strong>Current route path:</strong> {{ $route.fullPath }}</p>
